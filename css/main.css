@@ -1,0 +1,25 @@
+@import "theme.css";
+@import "/css/sections/header.css";
+@import "/css/sections/footer.css";
+@import "/css/sections/about-me.css";
+@import "/css/sections/projects.css";
+@import "/css/sections/skill.css";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: var(--p--font--size);
+  line-height: var(--p--line-height);
+  letter-spacing: var(--p--letter-spacing);
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-size: normal;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1536px;
+  padding: 0 2rem;
+}
