@@ -1,0 +1,18 @@
+﻿footer {
+  padding: 40px 0;
+  font-size: var(--caption-font-size);
+  color: var(--n-500);
+  text-align: center;
+  background-image: var(--gradient-color);
+  max-width: none !important;
+}
+
+.footer__content {
+  max-width: 1536px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

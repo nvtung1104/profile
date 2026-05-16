@@ -1,46 +1,446 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NgVanTung Portfolio</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/responsive.css" />
-    <link rel="icon" type="image/png" href="/assets/coding.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" type="image/png" href="assets/coding.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.2/dist/lenis.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <!-- Header -->
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="container navbar__container">
+        <a href="#" class="navbar__logo">NgVanTung<span>.</span></a>
+        <ul class="navbar__links" id="navbarLinks">
+          <li><a href="#about" class="navbar__link">Giới thiệu</a></li>
+          <li><a href="#skills" class="navbar__link">Kỹ năng</a></li>
+          <li><a href="#tools" class="navbar__link">Công cụ</a></li>
+          <li><a href="#projects" class="navbar__link">Dự án</a></li>
+          <li><a href="#contact" class="navbar__link">Liên hệ</a></li>
+        </ul>
+        <div class="navbar__right">
+          <a class="primaryButton navbar__cta" href="assets/cv/cv.pdf" target="_blank">Xem CV</a>
+          <button class="navbar__menu-btn" id="menuBtn" aria-label="Toggle menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Header -->
     <header>
-      <div class="container header_container">
-        <!-- Left column -->
+      <div class="container header__container">
         <div class="header__column--left">
-          <!--avt-->
           <div class="header__img"></div>
           <div class="header__content--left">
-            <h2 class="header__title">NgVanTung</h2>
-            <div class="header__bagde_container">
-              <div class="bagde">Lập trình web</div>
-              <div class="bagde">FullStack developer</div>
+            <span class="section-label">Portfolio</span>
+            <div class="available-badge">
+              <span class="available-dot"></span>
+              Sẵn sàng làm việc
             </div>
-            <p>
-              Mong muốn trúng tuyển vị trí Kỹ sư phần mềm
-              <span>software engineer</span> trong lĩnh vực phát triển web
+            <h1 class="header__title">NgVanTung</h1>
+            <div class="header__badge_container">
+              <div class="badge">Lập trình web, mobile app</div>
+              <div class="badge">Fullstack developer</div>
+            </div>
+            <p class="header__description">
+              Mong muốn ứng tuyển vị trí <strong>Junior Developer</strong> tại các công ty
+              phát triển phần mềm, nơi có thể áp dụng và phát triển kỹ năng lập trình
+              web fullstack, đóng góp vào dự án thực tế và phát triển chuyên nghiệp.
             </p>
+            <div class="header__actions CTA">
+              <a class="primaryButton" href="assets/cv/cv.pdf" target="_blank">Xem CV</a>
+              <a class="outlineButton" href="#projects">Xem Dự Án</a>
+            </div>
           </div>
         </div>
-        <!-- right column-->
-        <div class="header__column--right">
-          <h2 class="header__title">Thông tin liên hệ</h2>
-          <p>Gửi email cho mình tại: <span>ngvantung1104@gmail.com</span></p>
-          <p>Điện thoại: <span>0338944015</span></p>
+        <div class="header__column--right contact-card">
+          <h2 class="header__title header__title--small">Thông Tin Liên Hệ</h2>
+          <p class="contact-text">
+            Email: <span>ngvantung1104@gmail.com</span>
+          </p>
+          <p class="contact-text">Điện thoại: <span>0338 944 015</span></p>
+          <div class="contact__list">
+            <div class="contact__item">
+              <i data-lucide="globe"></i>
+              <span>Web App</span>
+            </div>
+            <div class="contact__item">
+              <i data-lucide="smartphone"></i>
+              <span>Mobile App</span>
+            </div>
+            <div class="contact__item contact__item--full">
+              <i data-lucide="layers"></i>
+              <span>Fullstack Developer</span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
+
+    <main>
+      <!-- About Me Section -->
+      <section class="section aboutMe__section" id="about">
+        <div class="container aboutMe__container">
+          <div class="aboutMe__wrapper">
+            <div class="aboutMe__icon">
+              <i data-lucide="rocket" style="width: 100%; height: 100%; color: var(--p-600)"></i>
+            </div>
+            <div class="aboutMe__content">
+              <div class="aboutMe__content_inner">
+                <p class="aboutMe__label">GIỚI THIỆU BẢN THÂN</p>
+                <h2 class="aboutMe__title">
+                  Xin chào! Mình là sinh viên năm cuối tại Đại học Kinh doanh và Công nghệ Hà Nội
+                </h2>
+                <p class="aboutMe__description">
+                  Mình đang theo học ngành Công nghệ Thông tin và có niềm đam mê
+                  mạnh mẽ với lập trình web fullstack. Mình không ngừng học hỏi và
+                  trau dồi kỹ năng để xây dựng những sản phẩm có giá trị thực tế.
+                </p>
+              </div>
+              <div class="aboutMe__card">
+                <p>
+                  Là một nhà phát triển web mới vào nghề, mình có nền tảng vững chắc về
+                  framework front-end như <strong>Vue.js</strong> và thư viện <strong>Next.js</strong>,
+                  đồng thời có kinh nghiệm làm việc với back-end qua <strong>Laravel</strong> và
+                  <strong>Node.js</strong>, cùng hệ quản trị cơ sở dữ liệu <strong>MySQL</strong>.
+                  Mình đã thực hiện nhiều đồ án từ ứng dụng học tập đến hệ thống quản lý nhà hàng.
+                </p>
+                <div class="CTA">
+                  <a class="primaryButton" href="assets/cv/cv.pdf" target="_blank">Xem CV</a>
+                  <a class="outlineButton" href="#projects">Xem Dự Án</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section skills__section" id="skills">
+        <div class="container skills__container">
+
+          <div class="section__header">
+            <h2 class="section__title">Kỹ Năng & Chuyên Môn</h2>
+            <p class="section__description">
+              Là một nhà phát triển phần web mới vào nghề, có nền tảng vững chắc về
+              framework front-end như Vue và thư viện Next.js. Có kinh nghiệm làm việc với
+              các công nghệ back-end như Laravel và Node.js.
+            </p>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="soft-skills-wrapper">
+            <div class="soft-skills-content">
+              <div class="soft-skills-header">
+                <i data-lucide="check-circle-2" class="soft-skills-icon"></i>
+                <h2 class="soft-skills-title">Kỹ Năng Mềm</h2>
+              </div>
+              <p class="soft-skills-description">
+                Kỹ năng giao tiếp, cộng tác, và giải quyết vấn đề xuất sắc, với thái độ
+                chủ động và ham học hỏi, dễ dàng thích nghi trong môi trường làm việc nhóm
+                năng động.
+              </p>
+              <div class="soft-skills-grid">
+                <div class="soft-skill-item">
+                  <i data-lucide="message-circle"></i>
+                  <span>Giao Tiếp Chuyên Nghiệp</span>
+                </div>
+                <div class="soft-skill-item">
+                  <i data-lucide="shield-check"></i>
+                  <span>Đáng Tin Cậy</span>
+                </div>
+                <div class="soft-skill-item">
+                  <i data-lucide="clock"></i>
+                  <span>Quản Lý Thời Gian</span>
+                </div>
+                <div class="soft-skill-item">
+                  <i data-lucide="graduation-cap"></i>
+                  <span>Ham Học Hỏi</span>
+                </div>
+              </div>
+            </div>
+            <div class="soft-skills-image soft-skills-image--frame">
+              <img src="assets/meme/kynangmem.jpg" alt="Kỹ năng mềm" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Tools Section -->
+      <section class="section tools__section" id="tools">
+        <div class="container tools__container">
+
+          <div class="section__header">
+            <p class="section__subtitle">Công Cụ Sử Dụng</p>
+            <h2 class="section__title">Công Cụ & Công Nghệ</h2>
+          </div>
+
+          <div class="tools__wrapper">
+            <!-- Image hover congcu1 → congcu2 -->
+            <div class="tools-img-wrapper">
+              <img class="tools-img tools-img--front" src="assets/meme/congcu1.jpg" alt="Công cụ 1" />
+              <img class="tools-img tools-img--back" src="assets/meme/congcu2.jpg" alt="Công cụ 2" />
+            </div>
+
+            <!-- Right: description + scrolling badges -->
+            <div class="tools__content">
+              <div class="technical-skills-header">
+                <i data-lucide="check-circle-2" class="technical-skills-icon"></i>
+                <h3 class="technical-skills-title">Ngôn Ngữ & Framework</h3>
+              </div>
+              <p class="technical-skills-description">
+                Thành thạo nhiều công cụ lập trình web hiện đại, có kinh nghiệm xây dựng
+                các ứng dụng web tương tác, thân thiện với người dùng và đam mê viết mã
+                sạch, dễ bảo trì.
+              </p>
+
+              <!-- Scrolling rows -->
+              <div class="tech-marquee">
+                <!-- Row 1: scroll left -->
+                <div class="tech-marquee-track tech-marquee-track--left">
+                  <div class="tech-marquee-inner">
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/vue.png" alt="Vue"/><span>VUE.JS</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/next.png" alt="Next"/><span>NEXT.JS</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/laravel.webp" alt="Laravel"/><span>LARAVEL</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/nodejs.png" alt="Node"/><span>NODE.JS</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/html.png" alt="HTML"/><span>HTML</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/css.jpg" alt="CSS"/><span>CSS</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/js.jpg" alt="JS"/><span>JAVASCRIPT</span></div>
+                    <!-- duplicate -->
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/vue.png" alt="Vue"/><span>VUE.JS</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/next.png" alt="Next"/><span>NEXT.JS</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/laravel.webp" alt="Laravel"/><span>LARAVEL</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/nodejs.png" alt="Node"/><span>NODE.JS</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/html.png" alt="HTML"/><span>HTML</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/css.jpg" alt="CSS"/><span>CSS</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/js.jpg" alt="JS"/><span>JAVASCRIPT</span></div>
+                  </div>
+                </div>
+                <!-- Row 2: scroll right -->
+                <div class="tech-marquee-track tech-marquee-track--right">
+                  <div class="tech-marquee-inner">
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/php.webp" alt="PHP"/><span>PHP</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/mysql.webp" alt="MySQL"/><span>MYSQL</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/python.png" alt="Python"/><span>PYTHON</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/java.png" alt="Java"/><span>JAVA</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/c++.webp" alt="C++"/><span>C++</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/github.webp" alt="GitHub"/><span>GITHUB</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/docker.jpg" alt="Docker"/><span>DOCKER</span></div>
+                    <!-- duplicate -->
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/php.webp" alt="PHP"/><span>PHP</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/mysql.webp" alt="MySQL"/><span>MYSQL</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/python.png" alt="Python"/><span>PYTHON</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/java.png" alt="Java"/><span>JAVA</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/c++.webp" alt="C++"/><span>C++</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/github.webp" alt="GitHub"/><span>GITHUB</span></div>
+                    <div class="tech-icon-badge"><img src="assets/ngonngu/docker.jpg" alt="Docker"/><span>DOCKER</span></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="section projects__section" id="projects">
+        <div class="container projects_container">
+          <div class="section__header">
+            <p class="section__subtitle">Đồ Án Thực Chiến</p>
+            <h2 class="section__title">Bộ sưu tập dự án thực tập</h2>
+            <p class="section__description">
+              Bộ sưu tập dự án thực tập tại trường giúp mình củng cố và hoàn thiện những
+              kỹ năng kỹ thuật cũng như khả năng giải quyết vấn đề một cách sáng tạo.
+            </p>
+          </div>
+
+          <div class="projects__cards_container projects__cards_container--3col">
+
+            <!-- Project 1 -->
+            <article class="projects__cards">
+              <div class="projects__cards_img-wrapper">
+                <img class="projects__cards_img" src="assets/duan/duan1.jpg" alt="English Learning App" />
+                <div class="project-overlay">
+                  <a href="https://github.com/nvtung1104/english-learning-backend" target="_blank" class="project-overlay-btn">Xem trên GitHub →</a>
+                </div>
+              </div>
+              <div class="projects__cards_wrapper">
+                <div class="projects__cards_titles">
+                  <h4>DỰ ÁN 1</h4>
+                  <h3>English Learning App</h3>
+                  <p class="project__summary">
+                    Hệ thống backend cho ứng dụng học tiếng Anh trực tuyến, hỗ trợ
+                    quản lý bài học, người dùng và theo dõi tiến trình học tập.
+                  </p>
+                  <div class="project-tech-tags">
+                    <span class="tech-tag">Vue 66.0%</span>
+                    <span class="tech-tag">PHP 22.4%</span>
+                    <span class="tech-tag">Blade 7.7%</span>
+                    <span class="tech-tag">JavaScript 3.5%</span>
+                  </div>
+                  <a href="https://github.com/nvtung1104/english-learning-backend" target="_blank" class="project-link">Xem trên GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="projects__cards">
+              <div class="projects__cards_img-wrapper">
+                <img class="projects__cards_img" src="assets/duan/duan2.webp" alt="TunACADEMY" />
+                <div class="project-overlay">
+                  <a href="https://github.com/nvtung1104/TunACADEMY" target="_blank" class="project-overlay-btn">Xem trên GitHub →</a>
+                </div>
+              </div>
+              <div class="projects__cards_wrapper">
+                <div class="projects__cards_titles">
+                  <h4>DỰ ÁN 2</h4>
+                  <h3>TunACADEMY</h3>
+                  <p class="project__summary">
+                    Nền tảng học trực tuyến với giao diện hiện đại, hỗ trợ quản lý
+                    khoá học, học viên và hệ thống thanh toán trực tuyến.
+                  </p>
+                  <div class="project-tech-tags">
+                    <span class="tech-tag">PHP 74.5%</span>
+                    <span class="tech-tag">Blade 22.2%</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Vue</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                  <a href="https://github.com/nvtung1104/TunACADEMY" target="_blank" class="project-link">Xem trên GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="projects__cards">
+              <div class="projects__cards_img-wrapper">
+                <img class="projects__cards_img" src="assets/duan/duan3.avif" alt="Quản Lý Nhà Hàng" />
+                <div class="project-overlay">
+                  <a href="https://github.com/nvtung1104/restaurant-management" target="_blank" class="project-overlay-btn">Xem trên GitHub →</a>
+                </div>
+              </div>
+              <div class="projects__cards_wrapper">
+                <div class="projects__cards_titles">
+                  <h4>DỰ ÁN 3</h4>
+                  <h3>Quản Lý Nhà Hàng</h3>
+                  <p class="project__summary">
+                    Hệ thống quản lý nhà hàng toàn diện: đặt bàn, quản lý menu,
+                    đơn hàng, nhân viên và thống kê doanh thu theo thời gian thực.
+                  </p>
+                  <div class="project-tech-tags">
+                    <span class="tech-tag">PHP 93.1%</span>
+                    <span class="tech-tag">CSS 6.9%</span>
+                  </div>
+                  <a href="https://github.com/nvtung1104/restaurant-management" target="_blank" class="project-link">Xem trên GitHub</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section contact__section" id="contact">
+        <div class="container contact__container">
+          <div class="section__header">
+            <p class="section__subtitle">Contact / Social</p>
+            <h2 class="section__title">Kết nối với mình</h2>
+            <p class="section__description">
+              Mình luôn sẵn sàng trao đổi công việc, nhận dự án mới hoặc hợp tác
+              cùng bạn. Đừng ngần ngại liên hệ!
+            </p>
+          </div>
+          <div class="contact__grid contact__grid--5col">
+
+            <a class="contact__panel" href="mailto:ngvantung1104@gmail.com">
+              <div class="contact__icon contact__icon--email"><i data-lucide="mail"></i></div>
+              <h3>Email</h3>
+              <p>ngvantung1104@gmail.com</p>
+            </a>
+
+            <a class="contact__panel" href="tel:0338944015">
+              <div class="contact__icon contact__icon--phone"><i data-lucide="phone"></i></div>
+              <h3>Điện thoại</h3>
+              <p>0338 944 015</p>
+            </a>
+
+            <a class="contact__panel" href="https://github.com/nvtung1104" target="_blank">
+              <div class="contact__icon contact__icon--github">
+                <img src="assets/ngonngu/github.webp" alt="GitHub" />
+              </div>
+              <h3>GitHub</h3>
+              <p>github.com/nvtung1104</p>
+            </a>
+
+            <a class="contact__panel" href="https://www.facebook.com/tun1104/" target="_blank">
+              <div class="contact__icon contact__icon--facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </div>
+              <h3>Facebook</h3>
+              <p>facebook.com/tun1104</p>
+            </a>
+
+            <a class="contact__panel" href="https://www.tiktok.com/@ngvantung0408" target="_blank">
+              <div class="contact__icon contact__icon--tiktok">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.16 8.16 0 0 0 4.77 1.52V6.74a4.85 4.85 0 0 1-1-.05z"/>
+                </svg>
+              </div>
+              <h3>TikTok</h3>
+              <p>@ngvantung0408</p>
+            </a>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer__container">
+        <div class="footer__brand">
+          <p class="footer__name">NgVanTung<span>.</span></p>
+          <p class="footer__bio">
+            Sinh viên năm cuối Công nghệ Thông tin tại Đại học Kinh doanh và Công nghệ Hà Nội.
+            Đam mê phát triển web fullstack với Vue.js, Next.js, Laravel và Node.js.
+            Luôn tìm kiếm cơ hội thực tập, học hỏi và đóng góp vào các dự án thực tế có giá trị.
+          </p>
+        </div>
+        <nav class="footer__nav">
+          <a href="#about">Giới thiệu</a>
+          <a href="#skills">Kỹ năng</a>
+          <a href="#tools">Công cụ</a>
+          <a href="#projects">Dự án</a>
+          <a href="#contact">Liên hệ</a>
+        </nav>
+        <p class="footer__copy">© 2025 NgVanTung. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-﻿.skills__container {
+.skills__container {
   display: flex;
   flex-direction: column;
   gap: 100px;
@@ -41,7 +41,7 @@
   padding: 8px;
   background: linear-gradient(135deg, var(--p-500), var(--p-600));
   border-radius: 12px;
-  filter: brightness(0) saturate(100%) invert(100%);
+  color: white;
 }
 
 .soft-skills-title {
@@ -223,7 +223,7 @@
   padding: 8px;
   background: linear-gradient(135deg, var(--p-500), var(--p-600));
   border-radius: 12px;
-  filter: brightness(0) saturate(100%) invert(100%);
+  color: white;
 }
 
 .technical-skills-title {

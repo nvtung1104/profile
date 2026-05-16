@@ -1,225 +1,102 @@
-@media (max-width: 1536px) {
+﻿@media (max-width: 1536px) {
   .container {
     max-width: 1440px;
   }
 }
+
 @media (max-width: 1440px) {
   .container {
     max-width: 1028px;
   }
+
   .softSkills_badge {
     position: static !important;
     transform: none !important;
   }
+
   .softSkills__book_icons {
     display: none;
   }
 }
+
 @media (max-width: 1280px) {
   .container {
     max-width: 1024px;
   }
+
   section {
     margin-top: 80px;
     margin-bottom: 80px;
   }
+
   .header__container {
     flex-direction: column;
     gap: 2rem;
   }
+
   .header__column--left {
     flex-direction: column;
     align-items: center;
   }
+
   .header__content--left {
     align-items: center;
   }
+
   .header__content--left p {
     text-align: center;
     max-width: 100%;
   }
+
   .header__column--right {
     width: 100%;
     text-align: center;
     align-items: center;
   }
+
   .contact__list {
     grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 1024px) {
   .aboutMe__wrapper {
     flex-direction: column;
     align-items: center;
     padding: 2.5rem;
   }
+
   .aboutMe__icon {
     width: 160px;
     height: 160px;
   }
+
   .aboutMe__content_inner {
     text-align: center;
   }
+
   .aboutMe__label::before {
     display: none;
   }
-  .soft-skills-wrapper {
-    grid-template-columns: 1fr;
+
+  .soft-skills-wrapper,
+  .technical-skills-wrapper {
+    flex-direction: column;
+    padding: 2.5rem;
   }
-  .soft-skills-image {
-    min-height: 240px;
+
+  .soft-skills-image,
+  .technical-skills-image {
+    width: 100%;
+    max-width: 450px;
+    height: 280px;
   }
+
   .soft-skills-grid {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 768px) {
-  .container {
-    max-width: 640px;
-  }
-  .soft-skills {
-    grid-template-columns: 1fr;
-  }
-  .projects__cards_img {
-    height: 200px;
-  }
-  .soft-skills-wrapper,
-  .technical-skills-wrapper {
-    padding: 2rem;
-    border-radius: 2rem;
-  }
-  .soft-skills-image,
-  .technical-skills-image {
-    height: 240px;
-    max-width: 100%;
-  }
-  .tech-icon-row {
-    animation: none !important;
-    justify-content: center;
-  }
-  .soft-skills-title,
-  .technical-skills-title {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 640px) {
-  :root {
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .container {
-    max-width: 475px;
-    padding: 0 1rem;
-  }
-  .section__title {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-    text-align: center;
-  }
-  header {
-    margin-top: 80px;
-  }
-  .header__badge_container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .aboutMe__wrapper {
-    padding: 2rem;
-    border-radius: 2rem;
-  }
-  .aboutMe__icon {
-    width: 120px;
-    height: 120px;
-  }
-  .aboutMe__title {
-    font-size: 1.65rem;
-  }
-  .aboutMe__card {
-    padding: 2rem;
-    border-radius: 1.5rem;
-  }
-  .soft-skills-wrapper,
-  .technical-skills-wrapper {
-    padding: 1.75rem;
-    border-radius: 1.75rem;
-  }
-  .soft-skills-title,
-  .technical-skills-title {
-    font-size: 1.35rem;
-  }
-  .soft-skills-image,
-  .technical-skills-image {
-    height: 220px;
-    transform: rotate(0deg);
-  }
-  .soft-skills-grid {
-    grid-template-columns: 1fr;
-  }
-  .tech-icon-badge {
-    padding: 0.6rem 1rem;
-  }
-  .tech-icon-badge img {
-    width: 20px;
-    height: 20px;
-  }
-  .tech-icon-badge span {
-    font-size: 0.8rem;
-  }
-  .CTA a {
-    padding: 12px 24px;
-    min-width: 160px;
-  }
-  .contact__list {
-    grid-template-columns: 1fr;
-  }
-  .header__actions {
-    flex-direction: column;
-  }
-  .contact__item {
-    padding: 0.9rem;
-  }
-}
 
-/* ===== TOOLS RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .tools__wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .tools-img-wrapper {
-    min-height: 260px;
-  }
-
-  .projects__cards_container--3col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact__grid--5col {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .projects__cards_container--3col {
-    grid-template-columns: 1fr;
-  }
-
-  .contact__grid--5col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .contact__grid--5col {
-    grid-template-columns: 1fr;
-  }
-
-  .tools-img-wrapper {
-    height: 220px;
-  }
-}
-
-/* ===== NAVBAR RESPONSIVE ===== */
 @media (max-width: 768px) {
   .navbar__links {
     display: none;
@@ -235,10 +112,8 @@
     padding: 0.75rem;
     flex-direction: column;
     gap: 0.2rem;
-  }
 
-  .navbar__links.open {
-    display: flex;
+    &.open { display: flex; }
   }
 
   .navbar__link {
@@ -248,29 +123,70 @@
     border-radius: 12px;
   }
 
-  .navbar__menu-btn {
-    display: flex;
+  .navbar__menu-btn { display: flex; }
+  .navbar__cta { display: none; }
+
+  .container {
+    max-width: 640px;
   }
 
-  .navbar__cta {
-    display: none;
+  .soft-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__cards_img-wrapper {
+    height: 200px;
+  }
+
+  .soft-skills-wrapper,
+  .technical-skills-wrapper {
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+
+  .soft-skills-image,
+  .technical-skills-image {
+    height: 240px;
+    max-width: 100%;
+  }
+
+  .tech-icon-row {
+    animation: none !important;
+    justify-content: center;
+  }
+
+  .soft-skills-title,
+  .technical-skills-title {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 640px) {
+  :root {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .container {
+    max-width: 475px;
+    padding: 0 1rem;
+  }
+
+  .section__title {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    text-align: center;
+  }
+
+  header {
+    margin-top: 80px;
+  }
+
   .scroll-top-btn {
     bottom: 1.25rem;
     right: 1.25rem;
     width: 42px;
     height: 42px;
-  }
-
-  .project-tech-tags {
-    gap: 0.3rem;
-  }
-
-  .tech-tag {
-    font-size: 0.7rem;
   }
 
   .available-badge {
@@ -288,6 +204,79 @@
     text-align: center;
     gap: 0.75rem;
   }
-}
 
-/*# sourceMappingURL=responsive.css.map */
+  .header__badge_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutMe__wrapper {
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+
+  .aboutMe__icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .aboutMe__title {
+    font-size: 1.65rem;
+  }
+
+  .aboutMe__card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .soft-skills-wrapper,
+  .technical-skills-wrapper {
+    padding: 1.75rem;
+    border-radius: 1.75rem;
+  }
+
+  .soft-skills-title,
+  .technical-skills-title {
+    font-size: 1.35rem;
+  }
+
+  .soft-skills-image,
+  .technical-skills-image {
+    height: 220px;
+    transform: rotate(0deg);
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-icon-badge {
+    padding: 0.6rem 1rem;
+  }
+
+  .tech-icon-badge img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tech-icon-badge span {
+    font-size: 0.8rem;
+  }
+
+  .CTA a {
+    padding: 12px 24px;
+    min-width: 160px;
+  }
+
+  .contact__list {
+    grid-template-columns: 1fr;
+  }
+
+  .header__actions {
+    flex-direction: column;
+  }
+
+  .contact__item {
+    padding: 0.9rem;
+  }
+}
