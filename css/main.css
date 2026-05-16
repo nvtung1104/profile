@@ -1507,6 +1507,16 @@ section {
   letter-spacing: -0.03em;
   transition: opacity 0.2s ease;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 .navbar__logo:hover { opacity: 0.75; }
