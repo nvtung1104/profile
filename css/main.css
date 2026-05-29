@@ -1579,9 +1579,20 @@ section {
   transition: background 0.2s ease;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
-.navbar__menu-btn:hover { background: var(--p-50); }
+.navbar__menu-btn:hover { 
+  background: var(--p-50);
+}
+
+.navbar__menu-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
 
 /* ===== AVAILABLE BADGE ===== */
 .available-badge {

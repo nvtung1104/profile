@@ -223,18 +223,21 @@
 @media (max-width: 768px) {
   .navbar__links {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 68px;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-bottom: 1px solid hsla(var(--p-700-code), 0.1);
-    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
-    padding: 0.75rem;
+    border-bottom: 1px solid hsla(var(--p-700-code), 0.12);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+    padding: 1rem;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.5rem;
+    z-index: 999;
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
   }
 
   .navbar__links.open {
@@ -244,12 +247,33 @@
   .navbar__link {
     width: 100%;
     text-align: center;
-    padding: 0.8rem 1rem;
+    padding: 1rem 1.5rem;
     border-radius: 12px;
+    transition: all 0.25s ease;
+    color: var(--p-950);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: block;
+  }
+
+  .navbar__link:hover {
+    background: var(--p-50);
+    color: var(--p-700);
+  }
+
+  .navbar__link.active {
+    background: linear-gradient(135deg, var(--p-50), var(--p-100));
+    color: var(--p-700);
   }
 
   .navbar__menu-btn {
     display: flex;
+  }
+
+  .navbar__menu-btn svg {
+    width: 24px;
+    height: 24px;
+    color: var(--p-950);
   }
 
   .navbar__cta {
@@ -263,6 +287,19 @@
     right: 1.25rem;
     width: 42px;
     height: 42px;
+  }
+
+  .navbar__links {
+    top: 60px;
+  }
+
+  .navbar__link {
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .navbar__menu-btn {
+    padding: 0.5rem;
   }
 
   .project-tech-tags {
