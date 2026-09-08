@@ -344,3 +344,85 @@ magnets.forEach(magnet => {
     });
   });
 });
+
+// ==========================================
+// 4. CV PDF Viewer Modal Logic
+// ==========================================
+const cvModal = document.getElementById('cvModal');
+const cvModalClose = document.getElementById('cvModalClose');
+const cvModalBackdrop = document.getElementById('cvModalBackdrop');
+const openCvBtns = document.querySelectorAll('.open-cv-modal');
+
+const openModal = (e) => {
+  if (e && (e.ctrlKey || e.metaKey)) return; // Allow opening in new tab if ctrl/cmd held
+  if (e) e.preventDefault();
+  if (cvModal) cvModal.classList.add('active');
+};
+
+const closeModal = () => {
+  if (cvModal) cvModal.classList.remove('active');
+};
+
+openCvBtns.forEach(btn => btn.addEventListener('click', openModal));
+if (cvModalClose) cvModalClose.addEventListener('click', closeModal);
+if (cvModalBackdrop) cvModalBackdrop.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && cvModal && cvModal.classList.contains('active')) {
+    closeModal();
+  }
+});
+
+// ==========================================
+// 5. 1-Click Copy & Toast Notification Logic
+// ==========================================
+const toast = document.getElementById('toastNotification');
+const toastMessage = document.getElementById('toastMessage');
+let toastTimeout;
+
+const showToast = (msg) => {
+  if (!toast || !toastMessage) return;
+  toastMessage.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+};
+
+document.querySelectorAll('.copy-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const textToCopy = trigger.getAttribute('data-copy');
+    if (textToCopy) {
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showToast(`Đã sao chép "${textToCopy}" vào bộ nhớ tạm!`);
+      }).catch(() => {
+        showToast(`Đã sao chép: ${textToCopy}`);
+      });
+    }
+  });
+});
+
+// ==========================================
+// 6. Stat Counter Animation
+// ==========================================
+document.querySelectorAll('.hero__stat-num[data-counter]').forEach(elem => {
+  const target = parseFloat(elem.getAttribute('data-counter'));
+  const isFloat = elem.getAttribute('data-counter').includes('.');
+  
+  gsap.fromTo(elem, 
+    { innerText: 0 },
+    {
+      innerText: target,
+      duration: 2,
+      ease: "power2.out",
+      scrollTrigger: { trigger: elem, start: "top 90%" },
+      snap: { innerText: isFloat ? 0.01 : 1 },
+      onUpdate: function() {
+        if (isFloat) {
+          elem.innerText = parseFloat(this.targets()[0].innerText).toFixed(2);
+        }
+      }
+    }
+  );
+});
